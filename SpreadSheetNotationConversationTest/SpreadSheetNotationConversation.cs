@@ -10,6 +10,11 @@ namespace SpreadSheetNotationConversationTest
         Dictionary<long, string> dic;
         public SpreadSheetNotationConversation(AllResultFixture allResultFixture)
         {
+            // Test class constructor (instance) will execute for all test cases.
+            // means if this class has 11 test cases then 11 times this constructor will execute before test cases execute.
+            // but Fixture check & if instance available it will not create new instance
+            // like
+            // List<int> lst =new List<int>{1,2,3,4,5}; // this local variable lst allways has 5 itemss before each test case execute 
             dic = allResultFixture.Dictionary;
         }
 
